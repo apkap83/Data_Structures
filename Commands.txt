@@ -1,0 +1,35 @@
+# Introduce Typescript in your project
+    pnpm install ts-node typescript --save-dev
+
+    # Initialize tsconfig.json
+    npx tsc --init
+
+        # Output Settings
+        # "outDir": "./dist",                /* Output directory for compiled JS files */
+        # "rootDir": "./src",                /* Root directory for your TypeScript files */
+
+
+    npx tsc src/min_item_of_matrix.ts
+    npx tsc --project tsconfig.json src/min_item_of_matrix.ts
+    npx tsc --project tsconfig.json
+
+    # Run directly without emitting files
+    npx ts-node src/min_item_of_matrix.ts
+
+    # Use ts-node with Custom Config
+    npx ts-node --project tsconfig.json src/index.ts
+
+
+    # Faster alternative from ts-node
+    # tsx (Fastest & Recommended) tsx is a faster TypeScript runner built on esbuild,
+    # making it significantly faster than ts-node. It also supports modern TypeScript and JavaScript features.
+
+    # Install
+    npm install -D tsx
+
+    
+    tsx src/min_item_of_matrix.ts
+
+    or watch mode
+
+    tsx watch src/min_item_of_matrix.ts
