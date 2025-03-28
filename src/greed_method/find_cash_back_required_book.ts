@@ -4,15 +4,15 @@ function findCashRequired_b(moneyBack: number) {
   // All Available Cash Denominations
   const C = [1, 2, 5, 10, 20, 50, 200, 500];
 
-  let find = moneyBack;
+  let runningDiff = moneyBack;
   let choice = C.length - 1;
 
   const coins = [];
 
-  while (choice >= 0 && find > 0) {
-    if (C[choice] <= find) {
+  while (choice >= 0 && runningDiff > 0) {
+    if (C[choice] <= runningDiff) {
       coins.push(C[choice]);
-      find = find - C[choice];
+      runningDiff = runningDiff - C[choice];
     } else {
       choice = choice - 1;
     }
@@ -24,4 +24,4 @@ function findCashRequired_b(moneyBack: number) {
   console.log("Sum:", sum);
 }
 
-findCashRequired_b(791);
+findCashRequired_b(5000);
